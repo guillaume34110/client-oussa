@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useRef, useState} from 'react';
 import './App.css';
+import Research from "./component/research/Research";
+import Inventory from "./component/inventory/Inventory";
+import RadioSelect from "./component/radioSelect/RadioSelect";
+import Catalog from "./component/catalog/Catalog";
+
+export interface State {
+    research: string
+    radio : string
+    suggest: string
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [stateData, setStateData] = useState<State>({research: "" , radio : "catalog", suggest:""})
+
+
+    return (
+        <div className="App">
+            <div className={"radio-research"}>
+                {/*<RadioSelect stateData={stateData} setStateData={setStateData}/>*/}
+
+            </div>
+            {/*{stateData.radio === "catalog" &&*/}
+            {/*<Catalog stateData={stateData} setStateData={setStateData}/>*/}
+            {/*}*/}
+            {/*{stateData.radio === "inventory" &&*/}
+                <Inventory stateData={stateData} setStateData={setStateData}/>
+            {/*}*/}
+
+        </div>
+    );
 }
 
 export default App;
+

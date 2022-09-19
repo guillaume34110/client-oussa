@@ -1,0 +1,15 @@
+.catalog-card {
+    width : 300px ;
+    height : 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+.catalog-card-text{
+    background: rgba(255, 255, 255, 0.85);
+    justify-self: flex-end;
+}
+.catalog-card-img {
+    width: 100%;
+}

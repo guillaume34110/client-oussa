@@ -1,0 +1,14 @@
+.radio-select{
+    display: flex;
+    justify-content: center;
+    margin-top : 3vh;
+}
+
+fieldset {
+    border:0 none;
+}
+
+
+.radio-select-container{
+    margin : 0 2vw 0 2vw;
+}

@@ -1,0 +1,62 @@
+.research{
+    position: absolute;
+    top : 2vh ;
+    left : 20vw;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+
+    width:60vw ;
+    border-radius: 8px;
+    z-index: 2;
+
+}
+.research-input{
+    width: inherit;
+    height: 2.5rem;
+    border-radius: 8px 0 0 8px;
+    padding-left: 1rem;
+    background: rgba(255, 255, 255, 0.60);
+    border-right: none;
+    appearance: none;
+    box-shadow: none;
+    border-bottom: 2px solid black;
+}
+input:focus {
+    outline: none ;
+
+}
+
+.btn-research{
+
+    display: flex;
+    width : fit-content;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius :0 8px 8px 0;
+    border: 2px solid black;
+    border-left: none;
+    background: rgba(255, 255, 255, 0.60);
+    padding: 0;
+    min-width: 40px;
+}
+
+.research-pin{
+    height: 40px;
+
+}
+.dropdown-bar{
+    border-radius: 8px 0 0 0;
+    border-bottom: none;
+}
+.dropdown-btn{
+    border-radius: 0 8px 0 0;
+    border-bottom: none;
+}
+.research-btn:hover {
+    filter: brightness(110%);
+}
+.mapboxgl-ctrl-attrib, .mapboxgl-ctrl-logo{
+    opacity: 0;
+}
