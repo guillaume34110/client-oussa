@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/oussa-client/static/css/main.2239aad5.css",
-    "main.js": "/oussa-client/static/js/main.a50efceb.js",
-    "static/js/787.28cb0dcd.chunk.js": "/oussa-client/static/js/787.28cb0dcd.chunk.js",
-    "index.html": "/oussa-client/index.html",
-    "main.2239aad5.css.map": "/oussa-client/static/css/main.2239aad5.css.map",
-    "main.a50efceb.js.map": "/oussa-client/static/js/main.a50efceb.js.map",
-    "787.28cb0dcd.chunk.js.map": "/oussa-client/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/client-oussa/static/css/main.2239aad5.css",
+    "main.js": "/client-oussa/static/js/main.fb57f4f0.js",
+    "static/js/787.28cb0dcd.chunk.js": "/client-oussa/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/client-oussa/index.html",
+    "main.2239aad5.css.map": "/client-oussa/static/css/main.2239aad5.css.map",
+    "main.fb57f4f0.js.map": "/client-oussa/static/js/main.fb57f4f0.js.map",
+    "787.28cb0dcd.chunk.js.map": "/client-oussa/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2239aad5.css",
-    "static/js/main.a50efceb.js"
+    "static/js/main.fb57f4f0.js"
   ]
 }
