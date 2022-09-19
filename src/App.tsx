@@ -20,7 +20,6 @@ function App() {
         <div className="App">
             <div className={"radio-research"}>
                 {/*<RadioSelect stateData={stateData} setStateData={setStateData}/>*/}
-
             </div>
             {/*{stateData.radio === "catalog" &&*/}
             {/*<Catalog stateData={stateData} setStateData={setStateData}/>*/}
