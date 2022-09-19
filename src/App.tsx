@@ -1,31 +1,33 @@
-import React, {useRef, useState} from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import Research from "./component/research/Research";
 import Inventory from "./component/inventory/Inventory";
-import RadioSelect from "./component/radioSelect/RadioSelect";
-import Catalog from "./component/catalog/Catalog";
+import {BrowserRouter} from "react-router-dom";
 
 export interface State {
     research: string
-    radio : string
+    radio: string
     suggest: string
 }
 
 function App() {
 
-    const [stateData, setStateData] = useState<State>({research: "" , radio : "catalog", suggest:""})
+    const [stateData, setStateData] = useState<State>({research: "", radio: "catalog", suggest: ""})
 
 
     return (
         <div className="App">
-            <div className={"radio-research"}>
-                {/*<RadioSelect stateData={stateData} setStateData={setStateData}/>*/}
-            </div>
+            {/*<div className={"radio-research"}>*/}
+            {/*    /!*<RadioSelect stateData={stateData} setStateData={setStateData}/>*!/*/}
+            {/*</div>*/}
             {/*{stateData.radio === "catalog" &&*/}
             {/*<Catalog stateData={stateData} setStateData={setStateData}/>*/}
             {/*}*/}
             {/*{stateData.radio === "inventory" &&*/}
-                <Inventory stateData={stateData} setStateData={setStateData}/>
+            <React.StrictMode>
+                <BrowserRouter>
+                    <Inventory stateData={stateData} setStateData={setStateData}/>
+                </BrowserRouter>
+            </React.StrictMode>
             {/*}*/}
 
         </div>

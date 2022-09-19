@@ -105,7 +105,7 @@ function Research({
     return (
         <div className="research">
             <input className="research-input" type="text" name="search" placeholder={"recherche"} ref={researchRef}
-                   onChange={suggest}/>
+                   onChange={suggest} autoComplete="off"/>
             <div className={"btn-research research-btn "}
                  ref={btnRef}
                  onClick={search}><img className={"research-pin"} src={Pin} alt="Logo"/></div>
