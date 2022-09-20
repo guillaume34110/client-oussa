@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/client-oussa/static/css/main.abd05773.css",
-    "main.js": "/client-oussa/static/js/main.b75980a5.js",
+    "main.js": "/client-oussa/static/js/main.04d10bcb.js",
     "static/js/483.5758704e.chunk.js": "/client-oussa/static/js/483.5758704e.chunk.js",
     "static/js/787.d4aba7ab.chunk.js": "/client-oussa/static/js/787.d4aba7ab.chunk.js",
     "static/media/pin-red-min.png": "/client-oussa/static/media/pin-red-min.f46bdc0aeb904388f27f.png",
     "index.html": "/client-oussa/index.html",
     "main.abd05773.css.map": "/client-oussa/static/css/main.abd05773.css.map",
-    "main.b75980a5.js.map": "/client-oussa/static/js/main.b75980a5.js.map",
+    "main.04d10bcb.js.map": "/client-oussa/static/js/main.04d10bcb.js.map",
     "483.5758704e.chunk.js.map": "/client-oussa/static/js/483.5758704e.chunk.js.map",
     "787.d4aba7ab.chunk.js.map": "/client-oussa/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.abd05773.css",
-    "static/js/main.b75980a5.js"
+    "static/js/main.04d10bcb.js"
   ]
 }
