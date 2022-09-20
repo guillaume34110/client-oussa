@@ -1,18 +1,19 @@
 {
   "files": {
     "main.css": "/client-oussa/static/css/main.7633e959.css",
-    "main.js": "/client-oussa/static/js/main.fa07815c.js",
+    "main.js": "/client-oussa/static/js/main.2d33bbf9.js",
     "static/js/483.5758704e.chunk.js": "/client-oussa/static/js/483.5758704e.chunk.js",
     "static/js/787.d4aba7ab.chunk.js": "/client-oussa/static/js/787.d4aba7ab.chunk.js",
     "static/media/pin-red-min.png": "/client-oussa/static/media/pin-red-min.f46bdc0aeb904388f27f.png",
+    "static/media/pin-blue-min.png": "/client-oussa/static/media/pin-blue-min.8e5a48dc302dd4e94446.png",
     "index.html": "/client-oussa/index.html",
     "main.7633e959.css.map": "/client-oussa/static/css/main.7633e959.css.map",
-    "main.fa07815c.js.map": "/client-oussa/static/js/main.fa07815c.js.map",
+    "main.2d33bbf9.js.map": "/client-oussa/static/js/main.2d33bbf9.js.map",
     "483.5758704e.chunk.js.map": "/client-oussa/static/js/483.5758704e.chunk.js.map",
     "787.d4aba7ab.chunk.js.map": "/client-oussa/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7633e959.css",
-    "static/js/main.fa07815c.js"
+    "static/js/main.2d33bbf9.js"
   ]
 }
