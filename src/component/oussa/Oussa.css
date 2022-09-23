@@ -1,0 +1,65 @@
+.inventory {
+    position: relative;
+}
+
+.inventory-tags {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 3;
+    top: 44px;
+    background: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+    border: 2px solid black;
+    border-top: none;
+    box-sizing: border-box;
+}
+
+.inventory-tags-without-map {
+    top: 64px;
+}
+
+.inventory-tags-dropdown {
+    border: none;
+}
+
+.inventory-tag {
+    border: 1px solid cornflowerblue;
+    border-radius: 10px;
+    background: rgba(187, 222, 255, 0.4);
+    padding: 3px 5px 5px 5px;
+    cursor: pointer;
+    margin: 0.8vh 5px;
+}
+
+.inventory-tag:hover {
+    filter: brightness(110%);
+}
+
+.pin {
+    image-rendering: smooth;
+}
+
+.logo-oussa {
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+    width: 90vw;
+    height: 35vh;
+    display: none;
+    transition: 1s;
+}
+
+.logo-oussa img {
+    image-rendering: smooth;
+    max-height: 35vh;
+    max-width: 90vw;
+}
+
+.visible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

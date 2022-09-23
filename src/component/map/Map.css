@@ -1,3 +1,11 @@
+.map-container {
+    transition: 2s;
+}
+
+.invisible {
+    opacity: 0
+}
+
 .mapboxgl-popup-content {
     padding: 15px 10px;
 }
@@ -17,3 +25,4 @@
     align-items: center;
     justify-content: center;
 }
+
