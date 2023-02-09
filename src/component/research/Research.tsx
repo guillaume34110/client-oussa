@@ -4,7 +4,8 @@ import './Research.css'
 import Pin from "../../assets/pin-blue-min.png";
 import {getItemByName} from "../../api/Items";
 import {getStoresByIds} from "../../api/Store";
-import {Item, ItemWithStore, Store} from "../oussa/Oussa";
+import {Item, ItemWithStore, Product, Store} from "../oussa/Oussa";
+import {getProductByName} from "../../api/Product";
 
 function Research({
                       stateData,
@@ -16,7 +17,7 @@ function Research({
     const btnRef = useRef<HTMLDivElement>(null)
     const tagsRef = useRef<HTMLUListElement>(null)
     const researchContainerRef = useRef<HTMLDivElement>(null)
-    const [itemsTags, setItemsTag] = useState<string[]>()
+    const [itemsTags, setItemsTag] = useState<Product[]>()
     const [items, setItems] = useState<Item[]>([])
 
     const search = () => {
@@ -44,10 +45,12 @@ function Research({
 
     const getItem = async () => {
         if (researchRef.current === null || btnRef.current === null || tagsRef.current === null) return
+        const items = await getItemByName(researchRef.current.value)
         researchRef.current.classList.remove('dropdown-bar')
         btnRef.current.classList.remove('dropdown-btn')
         tagsRef.current.classList.add('inventory-tags-dropdown')
         setItemsTag([])
+
         const storesIds = items.map(item => {
             return item.store
         })
@@ -67,7 +70,6 @@ function Research({
                 }
                 return {
                     name: item.name,
-                    price: item.price,
                     store: store,
                 }
             }
@@ -80,11 +82,7 @@ function Research({
         researchRef.current.classList.add('dropdown-bar')
         btnRef.current.classList.add('dropdown-btn')
         tagsRef.current.classList.remove('inventory-tags-dropdown')
-        const items: Item[] = await getItemByName(stateData.suggest)
-        setItems(items)
-        const tags: string[] = Array.from(new Set(items.map(item => {
-            return item.name
-        })))
+        const tags: Product[] = await getProductByName(stateData.suggest)
         setItemsTag(tags)
     }
 
@@ -128,7 +126,7 @@ function Research({
                  onClick={search}><img className={"research-pin"} src={Pin} alt="Logo"/></div>
             <ul className={"inventory-tags inventory-tags-dropdown inventory-tags-without-map"} ref={tagsRef}>
                 {itemsTags && itemsTags.map((item, index) => {
-                        return <li key={index} className={"inventory-tag tag-" + item} onClick={selectItem}>{item}</li>
+                        return <li key={index} className={"inventory-tag tag-" + item.name} onClick={selectItem}>{item.name}</li>
                     }
                 )}
             </ul>

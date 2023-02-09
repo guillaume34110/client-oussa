@@ -2,6 +2,7 @@ import {localisation} from "./localisation";
 import {Item} from "../component/oussa/Oussa";
 
 export const getItemByName = async (item: String): Promise<Item[]> => {
+
     try {
         let response = await fetch(localisation + `/inventory?item=${item}`, {
             method: "Get", // or 'PUT'

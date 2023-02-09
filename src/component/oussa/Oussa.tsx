@@ -4,11 +4,15 @@ import "./Oussa.css"
 import {OussaMap} from "../map/OussaMap";
 import Research from "../research/Research";
 import Logo from "../logo/Logo";
+import MentionsLegales from "../mentionLegales/MentionsLegales";
 
 export interface Item {
     name: string,
-    price: string,
     store: string,
+}
+
+export interface Product {
+    name: string,
 }
 
 export interface Store {
@@ -22,7 +26,6 @@ export interface Store {
 
 export interface ItemWithStore {
     name: string,
-    price: string,
     store: Store,
 }
 
@@ -50,6 +53,7 @@ function Oussa({stateData, setStateData}:
             <Logo stateData={stateData}/>
             <Research stateData={stateData} setStateData={setStateData} setItemToDisplay={setItemToDisplay}/>
             <OussaMap inventory={itemToDisplay} stateData={stateData}/>
+            <MentionsLegales />
         </div>
     )
 }

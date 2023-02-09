@@ -1,20 +1,19 @@
-
 import {ItemWithStore, PopupInfo} from "../oussa/Oussa";
 import 'mapbox-gl/dist/mapbox-gl.css'
 import Pin from "../../assets/pin-red-min.png"
 import React, {useEffect, useRef, useState} from "react";
 import './Map.css'
 import {FirstSearch, State} from "../../App";
-import Map, {GeolocateControl, MapboxMap, Marker, NavigationControl, Popup, ViewStateChangeEvent} from "react-map-gl";
+import Map, {GeolocateControl, Marker, NavigationControl, Popup, ViewStateChangeEvent} from "react-map-gl";
 
 export function OussaMap({
-                        inventory,
-                        stateData
-                    }:
-                        {
-                            inventory: ItemWithStore[],
-                            stateData: State
-                        }) {
+                             inventory,
+                             stateData
+                         }:
+                             {
+                                 inventory: ItemWithStore[],
+                                 stateData: State
+                             }) {
 
     const initialZoom = 8.8 - (window.innerWidth / 1280)
     const [zoom, setZoom] = useState<number>(initialZoom)
@@ -50,18 +49,18 @@ export function OussaMap({
     return (
         <div ref={mapRef} className={"map-container invisible"}>
             <Map
-                 initialViewState={{
-                     longitude: 55.5274887,
-                     latitude: -21.1535665,
-                     zoom: initialZoom
-                 }}
-                 minZoom={8.2}
-                 maxBounds={[[54, -22], [57, -19.5]]}
-                 style={{width: '100vw', height: '100vh', position: 'absolute', top: '0', left: '0', zIndex: '0'}}
-                 mapStyle="mapbox://styles/mapbox/streets-v9"
-                 mapboxAccessToken="pk.eyJ1IjoiYmdoamZ1eWd5Z3lrZ2ZpdWsiLCJhIjoiY2w4MXdpa21lMDAwZTN1bXh4Z2Jvb2gzcCJ9.0Nf8W1ZB5LwrsNYZp9T2Qw"
-                 onZoom={resize}
-                 >
+                initialViewState={{
+                    longitude: 55.5274887,
+                    latitude: -21.1535665,
+                    zoom: initialZoom
+                }}
+                minZoom={8.2}
+                maxBounds={[[54, -22], [57, -19.5]]}
+                style={{width: '100vw', height: '100vh', position: 'absolute', top: '0', left: '0', zIndex: '0'}}
+                mapStyle="mapbox://styles/mapbox/streets-v9"
+                mapboxAccessToken="pk.eyJ1IjoiYmdoamZ1eWd5Z3lrZ2ZpdWsiLCJhIjoiY2w4MXdpa21lMDAwZTN1bXh4Z2Jvb2gzcCJ9.0Nf8W1ZB5LwrsNYZp9T2Qw"
+                onZoom={resize}
+            >
                 <GeolocateControl position="bottom-left"/>
                 <NavigationControl position="bottom-left"/>
                 {inventory && inventory.map((item, index) => (

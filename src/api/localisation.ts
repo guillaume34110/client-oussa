@@ -1,1 +1,1 @@
-export const localisation = "https://oussa-loby.herokuapp.com" // "http://localhost:8080"
+export const localisation = "http://localhost:3001"//"https://oussa-loby.herokuapp.com" // "http://localhost:8080"
